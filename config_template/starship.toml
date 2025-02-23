@@ -1,0 +1,77 @@
+add_newline = false
+format = """
+[](#9A348E)\
+$os\
+$username\
+[](bg:#DA627D fg:#9A348E)\
+$directory\
+[](fg:#DA627D bg:#FCA17D)\
+$git_branch\
+$git_status\
+[](fg:#FCA17D bg:#86BBD8)\
+$conda\
+$python\
+[](fg:#86BBD8 bg:#06969A)\
+$gcloud\
+[](fg:#06969A bg:#33658A)\
+[](fg:#33658A)\
+$line_break$character\
+"""
+
+# 1(style = "bg:#9A348E")
+[os]
+style = "bg:#9A348E"
+disabled = false
+
+[os.symbols]
+Macos = " "
+Linux = "󰌽 "
+Ubuntu = " "
+
+[username]
+show_always = true
+style_user = "bg:#9A348E"
+style_root = "bg:#9A348E"
+format = '[$user ]($style)'
+disabled = false
+
+# 2(style = "bg:#DA627D")
+[directory]
+style = "bg:#DA627D"
+format = "[ $path ]($style)"
+truncation_length = 3
+truncation_symbol = " "
+
+# 3(style = "bg:#FCA17D")
+[git_branch]
+symbol = " "
+style = "bg:#FCA17D"
+format = '[ $symbol$branch]($style)'
+
+[git_status]
+style = "bg:#FCA17D"
+format = '[ $all_status$ahead_behind ]($style)'
+
+# 4(style = "bg:#86BBD8")
+[conda]
+style = "bg:#86BBD8"
+format = '[ $symbol$environment]($style)'
+ignore_base = false
+
+[python]
+symbol = " "
+style = "bg:#86BBD8"
+format = '[ $symbol($version)(\($virtualenv\)) ]($style)'
+
+# 5(style = "bg:#06969A")
+[gcloud]
+symbol = "󱇶 "
+style = "bg:#06969A"
+format = '[ $symbol($project) ]($style)'
+
+# 6(style = "bg:#33658A")
+# non
+
+
+# font: https://www.nerdfonts.com/#home
+# symbol: https://www.nerdfonts.com/cheat-sheet
