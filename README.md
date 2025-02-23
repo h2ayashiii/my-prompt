@@ -33,5 +33,6 @@ curl -sS https://starship.rs/install.sh | sh
 ## Configuration
 Copy config file to `~/.config/starship.toml`:
 ```sh
+mkdir -p ~/.config && cd ~/.config
 cp -n ./config_template/starship.toml ~/.config/
 ```
